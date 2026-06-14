@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>QBIT Lab — Quantum Bio-Intelligence Technology</title>
-<meta name="description" content="Han Lab at Cambridge & Yonsei. Pioneering AI-driven drug discovery through quantum and quantum-inspired methods." />
+<title>QBIT Lab — 양자 생물지능 기술 연구실</title>
+<meta name="description" content="케임브리지대학교와 연세대학교 한남식 교수 연구실. 양자 및 양자영감 방법론과 AI를 통한 신약 개발 연구." />
 <link rel="alternate" hreflang="en" href="https://qbit-lab.yonsei.ac.kr/" />
 <link rel="alternate" hreflang="ko" href="https://qbit-lab.yonsei.ac.kr/ko/" />
 <link rel="alternate" hreflang="x-default" href="https://qbit-lab.yonsei.ac.kr/" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg-0: #07090F;
-  --bg-1: #0C111C;
-  --bg-2: #131A2A;
-  --bg-3: #1A2236;
-  --border: #1E2740;
-  --border-bright: #2E3A5C;
-  --text-0: #F4F6FB;
-  --text-1: #C5CCDB;
-  --text-2: #8590A8;
-  --text-3: #545E76;
-  --cyan: #22D3EE;
-  --orange: #FB923C;
-  --violet: #A78BFA;
-  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --bg-0: #07090F; --bg-1: #0C111C; --bg-2: #131A2A; --bg-3: #1A2236;
+  --border: #1E2740; --border-bright: #2E3A5C;
+  --text-0: #F4F6FB; --text-1: #C5CCDB; --text-2: #8590A8; --text-3: #545E76;
+  --cyan: #22D3EE; --orange: #FB923C; --violet: #A78BFA;
+  --font-sans: 'IBM Plex Sans KR', 'IBM Plex Sans', system-ui, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
   --font-serif: 'IBM Plex Serif', Georgia, serif;
 }
@@ -52,18 +43,12 @@ body::before {
 .orb-2 { width: 500px; height: 500px; top: 40%; right: -150px; background: radial-gradient(circle, rgba(251,146,60,0.3), transparent 60%); }
 .orb-3 { width: 400px; height: 400px; bottom: 10%; left: 20%; background: radial-gradient(circle, rgba(167,139,250,0.25), transparent 60%); }
 
-h1, h2, h3, h4 { color: var(--text-0); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; }
+h1, h2, h3, h4 { color: var(--text-0); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
 a { color: var(--cyan); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--orange); }
-
 .container { max-width: 1280px; margin: 0 auto; padding: 0 32px; position: relative; z-index: 1; }
 
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 18px 32px; background: rgba(7,9,15,0.7); backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
-}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 32px; background: rgba(7,9,15,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
 .nav-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
 .nav-right { display: flex; align-items: center; }
 .brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-weight: 600; font-size: 17px; color: var(--text-0); }
@@ -83,13 +68,13 @@ nav {
 .lang-toggle a:hover { color: var(--text-0); }
 @media (max-width: 760px) { .lang-toggle { margin-left: 12px; font-size: 11px; } }
 
-/* HERO */
 .hero { min-height: 100vh; padding: 160px 0 80px; display: flex; align-items: center; position: relative; }
 .hero-tag { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; color: var(--cyan); text-transform: uppercase; margin-bottom: 32px; display: inline-flex; align-items: center; gap: 12px; }
 .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--cyan); }
-.hero h1 { font-size: clamp(56px, 9vw, 128px); font-weight: 700; line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 24px; color: var(--text-0); }
-.hero h1 .accent { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--orange); }
-.hero-sub { font-family: var(--font-serif); font-style: italic; font-size: clamp(20px, 2.5vw, 32px); color: var(--text-1); font-weight: 400; margin-bottom: 48px; max-width: 800px; line-height: 1.35; }
+.hero h1 { font-size: clamp(48px, 8vw, 112px); font-weight: 700; line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 24px; color: var(--text-0); }
+.hero h1 .accent { font-family: inherit; font-style: normal; font-weight: 600; color: var(--orange); }
+.hero-fullname { font-family: var(--font-mono); font-size: 13px; color: var(--text-3); letter-spacing: 0.08em; margin-top: 14px; margin-bottom: 32px; }
+.hero-sub { font-family: var(--font-sans); font-style: normal; font-size: clamp(17px, 2vw, 22px); color: var(--text-1); font-weight: 400; margin-bottom: 48px; max-width: 850px; line-height: 1.7; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 40px 64px; padding-top: 40px; border-top: 1px solid var(--border); max-width: 900px; }
 .hero-meta-item { display: flex; flex-direction: column; gap: 6px; }
 .hero-meta-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--text-3); text-transform: uppercase; }
@@ -99,7 +84,6 @@ nav {
 .hero-decoration { position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 480px; height: 480px; opacity: 0.6; pointer-events: none; display: none; }
 @media (min-width: 1280px) { .hero-decoration { display: block; } }
 
-/* AFFILIATIONS */
 .affiliations { padding: 40px 0 0; position: relative; z-index: 1; }
 .affiliations-inner { display: flex; align-items: center; gap: 48px; padding: 32px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .affiliations-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--text-3); text-transform: uppercase; white-space: nowrap; }
@@ -109,35 +93,33 @@ nav {
 .affiliations-logos img.logo-cambridge { height: 38px; }
 .affiliations-logos img:hover { opacity: 1; }
 
-/* SECTION */
 section { padding: 120px 0; position: relative; }
 .section-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; color: var(--cyan); text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
 .section-label::before { content: ''; width: 24px; height: 1px; background: var(--cyan); }
-.section-title { font-size: clamp(36px, 5vw, 64px); font-weight: 600; line-height: 1.05; letter-spacing: -0.03em; color: var(--text-0); margin-bottom: 24px; max-width: 900px; }
-.section-title .accent { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--orange); }
-.section-intro { font-size: 19px; color: var(--text-1); max-width: 720px; margin-bottom: 80px; line-height: 1.55; }
+.section-title { font-size: clamp(32px, 4.5vw, 56px); font-weight: 600; line-height: 1.3; letter-spacing: -0.03em; color: var(--text-0); margin-bottom: 24px; max-width: 900px; }
+.section-title .accent { font-family: inherit; font-style: normal; font-weight: 600; color: var(--orange); }
+.section-intro { font-size: 18px; color: var(--text-1); max-width: 760px; margin-bottom: 80px; line-height: 1.7; }
 
-/* ABOUT */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
-.about-text p { font-size: 17px; color: var(--text-1); margin-bottom: 20px; line-height: 1.65; }
+.about-text p { font-size: 16px; color: var(--text-1); margin-bottom: 20px; line-height: 1.8; }
 .about-text p strong { color: var(--text-0); font-weight: 600; }
 .about-stats { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
 .about-stat { padding: 32px 28px; background: var(--bg-1); }
 .about-stat .num { font-family: var(--font-mono); font-size: 48px; font-weight: 500; color: var(--cyan); line-height: 1; letter-spacing: -0.02em; display: block; margin-bottom: 12px; }
 .about-stat .num .small { font-size: 24px; color: var(--text-2); }
 .about-stat .label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.1em; color: var(--text-2); text-transform: uppercase; display: block; margin-bottom: 4px; }
-.about-stat .desc { font-size: 14px; color: var(--text-1); line-height: 1.45; }
+.about-stat .desc { font-size: 14px; color: var(--text-1); line-height: 1.55; }
 .about-stat em { font-style: italic; color: var(--text-0); }
 
-/* RESEARCH */
 .research-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
 @media (max-width: 900px) { .research-pillars { grid-template-columns: 1fr; } }
 .pillar { background: var(--bg-1); border: 1px solid var(--border); padding: 36px 32px; border-radius: 4px; position: relative; transition: border-color 0.3s, transform 0.3s; }
 .pillar:hover { border-color: var(--border-bright); transform: translateY(-4px); }
 .pillar-num { font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--cyan); margin-bottom: 32px; letter-spacing: 0.05em; }
-.pillar h3 { font-size: 22px; font-weight: 600; color: var(--text-0); margin-bottom: 16px; line-height: 1.25; }
-.pillar p { font-size: 15px; color: var(--text-2); margin-bottom: 20px; line-height: 1.6; }
+.pillar h3 { font-size: 20px; font-weight: 600; color: var(--text-0); margin-bottom: 16px; line-height: 1.4; }
+.pillar-en { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); font-weight: 400; letter-spacing: 0.03em; }
+.pillar p { font-size: 15px; color: var(--text-2); margin-bottom: 20px; line-height: 1.7; }
 .pillar-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .pillar-tag { font-family: var(--font-mono); font-size: 11px; padding: 4px 10px; background: var(--bg-2); border: 1px solid var(--border); color: var(--text-1); border-radius: 2px; }
 .outcomes { display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 0; margin-bottom: 80px; }
@@ -145,16 +127,15 @@ section { padding: 120px 0; position: relative; }
 .outcomes-label { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); letter-spacing: 0.15em; text-transform: uppercase; padding-right: 48px; padding-top: 6px; }
 .outcome { padding: 0 32px; border-left: 1px solid var(--border); }
 @media (max-width: 900px) { .outcome { border-left: none; padding: 0; } }
-.outcome h4 { font-size: 20px; color: var(--text-0); font-weight: 600; margin-bottom: 8px; }
+.outcome h4 { font-size: 18px; color: var(--text-0); font-weight: 600; margin-bottom: 8px; }
 .outcome h4 .arrow { color: var(--orange); font-weight: 400; margin-right: 6px; }
-.outcome p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+.outcome p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
 .diseases { background: var(--bg-1); border: 1px solid var(--border); padding: 36px; border-radius: 4px; }
 .diseases-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-3); margin-bottom: 20px; }
 .disease-tags { display: flex; flex-wrap: wrap; gap: 8px 12px; }
 .disease-tag { font-family: var(--font-sans); font-size: 14px; color: var(--text-1); padding: 6px 14px; background: transparent; border: 1px solid var(--border-bright); border-radius: 100px; transition: all 0.2s; }
 .disease-tag:hover { border-color: var(--cyan); color: var(--cyan); }
 
-/* PEOPLE */
 .pi-card { display: grid; grid-template-columns: 240px 1fr; gap: 48px; padding: 48px; background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%); border: 1px solid var(--border-bright); border-radius: 4px; margin-bottom: 64px; position: relative; overflow: hidden; }
 .pi-card::before { content: ''; position: absolute; top: 0; right: 0; width: 300px; height: 300px; background: radial-gradient(circle, rgba(34,211,238,0.08), transparent 70%); pointer-events: none; }
 @media (max-width: 900px) { .pi-card { grid-template-columns: 1fr; gap: 32px; padding: 32px; } }
@@ -162,20 +143,16 @@ section { padding: 120px 0; position: relative; }
 .pi-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: saturate(0.92) contrast(1.02); }
 @media (max-width: 900px) { .pi-photo { width: 200px; height: 250px; } }
 .pi-label { font-family: var(--font-mono); font-size: 11px; color: var(--cyan); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
-.pi-name { font-size: 36px; font-weight: 600; color: var(--text-0); letter-spacing: -0.02em; margin-bottom: 4px; line-height: 1.1; }
-.pi-name .ko { font-size: 22px; color: var(--text-2); font-weight: 400; margin-left: 8px; }
-.pi-degree { font-family: var(--font-mono); font-size: 13px; color: var(--text-2); margin-bottom: 24px; }
-.pi-roles { font-size: 14px; color: var(--text-1); line-height: 1.7; margin-bottom: 24px; }
-.pi-roles strong { color: var(--text-0); font-weight: 500; }
-
+.pi-name { font-size: 32px; font-weight: 600; color: var(--text-0); letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.2; }
+.pi-name .en { font-size: 20px; color: var(--text-2); font-weight: 400; margin-left: 8px; }
 .pi-affiliations { display: flex; flex-direction: column; gap: 18px; margin-bottom: 28px; }
 .pi-affil-group { display: flex; flex-direction: column; gap: 4px; }
 .pi-affil-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
 .pi-affil-label.yonsei { color: var(--cyan); }
 .pi-affil-label.cambridge { color: var(--orange); }
 .pi-affil-label.industry { color: var(--violet); }
-.pi-affil-primary { font-size: 15px; color: var(--text-0); font-weight: 500; line-height: 1.4; }
-.pi-affil-secondary { font-size: 13px; color: var(--text-2); line-height: 1.55; }
+.pi-affil-primary { font-size: 15px; color: var(--text-0); font-weight: 500; line-height: 1.5; }
+.pi-affil-secondary { font-size: 13px; color: var(--text-2); line-height: 1.65; }
 .pi-contact { display: flex; flex-wrap: wrap; gap: 16px 32px; padding-top: 20px; border-top: 1px solid var(--border); font-family: var(--font-mono); font-size: 13px; }
 .pi-contact a { color: var(--text-1); }
 .pi-contact a:hover { color: var(--cyan); }
@@ -185,7 +162,7 @@ section { padding: 120px 0; position: relative; }
 @media (max-width: 900px) { .teams { grid-template-columns: 1fr; } }
 .team { background: var(--bg-1); border: 1px solid var(--border); border-radius: 4px; padding: 36px 32px; }
 .team-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
-.team-header h3 { font-size: 22px; font-weight: 600; color: var(--text-0); }
+.team-header h3 { font-size: 20px; font-weight: 600; color: var(--text-0); }
 .team-header h3 .location { font-family: var(--font-mono); font-size: 13px; color: var(--text-2); font-weight: 400; margin-left: 12px; }
 .team-count { font-family: var(--font-mono); font-size: 12px; color: var(--cyan); letter-spacing: 0.05em; }
 .role-group { margin-bottom: 24px; }
@@ -200,7 +177,7 @@ section { padding: 120px 0; position: relative; }
 
 .alumni-block { background: var(--bg-1); border: 1px solid var(--border); border-radius: 4px; padding: 36px; }
 .alumni-block h3 { font-size: 20px; color: var(--text-0); margin-bottom: 8px; font-weight: 600; }
-.alumni-summary { font-size: 15px; color: var(--text-2); margin-bottom: 28px; line-height: 1.6; }
+.alumni-summary { font-size: 15px; color: var(--text-2); margin-bottom: 28px; line-height: 1.8; }
 .alumni-summary strong { color: var(--text-1); }
 .alumni-note { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 28px; margin-top: -16px; }
 .alumni-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 48px; }
@@ -208,7 +185,6 @@ section { padding: 120px 0; position: relative; }
 .alumni-group .role-title { color: var(--text-3); }
 .alumni-group .role-members li { font-size: 14px; color: var(--text-2); }
 
-/* GALLERY */
 .gallery { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 240px; gap: 12px; margin-top: 60px; }
 @media (max-width: 900px) { .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; } }
 .gphoto { overflow: hidden; border-radius: 4px; position: relative; border: 1px solid var(--border); background: var(--bg-2); }
@@ -225,7 +201,6 @@ section { padding: 120px 0; position: relative; }
 .gphoto.span-2 { grid-column: span 2; }
 @media (max-width: 900px) { .gphoto.span-3x2, .gphoto.span-3, .gphoto.span-2 { grid-column: span 2; grid-row: span 1; } }
 
-/* PUBLICATIONS */
 .pubs { display: flex; flex-direction: column; }
 .pub-year { display: grid; grid-template-columns: 120px 1fr; gap: 32px; padding: 32px 0; border-top: 1px solid var(--border); }
 .pub-year:first-of-type { border-top: 1px solid var(--border-bright); }
@@ -233,25 +208,23 @@ section { padding: 120px 0; position: relative; }
 .pub-list { display: flex; flex-direction: column; gap: 20px; }
 .pub { display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: start; }
 .pub-num { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); padding-top: 4px; }
-.pub-title { font-size: 16px; color: var(--text-0); font-weight: 500; line-height: 1.5; margin-bottom: 4px; }
+.pub-title { font-size: 16px; color: var(--text-0); font-weight: 500; line-height: 1.55; margin-bottom: 4px; }
 .pub-title a { color: var(--text-0); border-bottom: 1px solid transparent; transition: border-color 0.2s, color 0.2s; }
 .pub-title a:hover { color: var(--cyan); border-bottom-color: var(--cyan); }
-.pub-meta { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+.pub-meta { font-size: 14px; color: var(--text-2); line-height: 1.65; }
 .pub-meta .han { color: var(--cyan); font-weight: 500; }
 .pub-meta .journal { color: var(--orange); font-style: italic; }
 .pub-meta .badge { display: inline-block; font-family: var(--font-mono); font-size: 10px; padding: 2px 8px; background: var(--bg-2); border: 1px solid var(--border-bright); border-radius: 2px; color: var(--text-1); margin-left: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
 .pubs-footer { padding: 40px 0 0; border-top: 1px solid var(--border); margin-top: 32px; text-align: center; }
 .pubs-footer a { font-family: var(--font-mono); font-size: 14px; letter-spacing: 0.05em; }
 
-/* NEWS */
 .news-item { display: grid; grid-template-columns: 140px 1fr; gap: 32px; padding: 28px 0; border-top: 1px solid var(--border); }
 .news-item:first-of-type { border-top: 1px solid var(--border-bright); }
 .news-date { font-family: var(--font-mono); font-size: 13px; color: var(--cyan); letter-spacing: 0.05em; padding-top: 3px; }
-.news-content { font-size: 16px; color: var(--text-1); line-height: 1.55; }
+.news-content { font-size: 16px; color: var(--text-1); line-height: 1.7; }
 .news-content strong { color: var(--text-0); font-weight: 600; }
-.news-content em { color: var(--orange); font-family: var(--font-serif); font-style: italic; }
+.news-content em { color: var(--orange); font-family: inherit; font-style: normal; font-weight: 500; }
 
-/* CONTACT */
 .contacts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
 @media (max-width: 900px) { .contacts { grid-template-columns: 1fr; } }
 .contact-card { background: var(--bg-1); border: 1px solid var(--border); border-radius: 4px; padding: 40px 36px; position: relative; overflow: hidden; }
@@ -259,8 +232,8 @@ section { padding: 120px 0; position: relative; }
 .contact-card.cambridge::before { background: linear-gradient(90deg, var(--orange), transparent); }
 .contact-flag { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; }
 .contact-card.cambridge .contact-flag { color: var(--orange); }
-.contact-name { font-size: 24px; font-weight: 600; color: var(--text-0); margin-bottom: 6px; }
-.contact-sub { font-size: 15px; color: var(--text-2); margin-bottom: 28px; line-height: 1.5; }
+.contact-name { font-size: 22px; font-weight: 600; color: var(--text-0); margin-bottom: 6px; }
+.contact-sub { font-size: 14px; color: var(--text-2); margin-bottom: 28px; line-height: 1.65; }
 .contact-detail { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; font-size: 14px; }
 .contact-detail .key { font-family: var(--font-mono); font-size: 11px; color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase; min-width: 60px; }
 .contact-detail .val { color: var(--text-1); }
@@ -268,18 +241,16 @@ section { padding: 120px 0; position: relative; }
 .contact-detail .val a:hover { color: var(--cyan); }
 .collab-cta { background: var(--bg-1); border: 1px solid var(--border); border-radius: 4px; padding: 36px 40px; display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; }
 @media (max-width: 700px) { .collab-cta { grid-template-columns: 1fr; gap: 24px; } }
-.collab-cta h3 { font-size: 22px; color: var(--text-0); font-weight: 600; margin-bottom: 8px; }
-.collab-cta p { font-size: 15px; color: var(--text-2); line-height: 1.55; }
+.collab-cta h3 { font-size: 20px; color: var(--text-0); font-weight: 600; margin-bottom: 8px; }
+.collab-cta p { font-size: 15px; color: var(--text-2); line-height: 1.7; }
 .cta-btn { display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px; background: var(--cyan); color: var(--bg-0) !important; font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.05em; border-radius: 2px; text-transform: uppercase; transition: all 0.2s; white-space: nowrap; }
 .cta-btn:hover { background: var(--orange); }
 
-/* FOOTER */
 footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 80px; position: relative; z-index: 1; }
 .footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
 .footer-brand { font-family: var(--font-mono); font-size: 14px; color: var(--text-0); font-weight: 500; }
 .footer-meta { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); }
 
-/* ANIMATIONS */
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .fade-up { animation: fadeUp 0.8s ease-out backwards; }
 .fade-up.d1 { animation-delay: 0.1s; }
@@ -321,18 +292,18 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
     </a>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="#about"><span class="num">01</span>About</a></li>
-        <li><a href="#research"><span class="num">02</span>Research</a></li>
-        <li><a href="#people"><span class="num">03</span>People</a></li>
-        <li><a href="#gallery"><span class="num">04</span>Gallery</a></li>
-        <li><a href="#publications"><span class="num">05</span>Publications</a></li>
-        <li><a href="#news"><span class="num">06</span>News</a></li>
-        <li><a href="#contact"><span class="num">07</span>Contact</a></li>
+        <li><a href="#about"><span class="num">01</span>소개</a></li>
+        <li><a href="#research"><span class="num">02</span>연구</a></li>
+        <li><a href="#people"><span class="num">03</span>구성원</a></li>
+        <li><a href="#gallery"><span class="num">04</span>갤러리</a></li>
+        <li><a href="#publications"><span class="num">05</span>논문</a></li>
+        <li><a href="#news"><span class="num">06</span>소식</a></li>
+        <li><a href="#contact"><span class="num">07</span>연락처</a></li>
       </ul>
       <div class="lang-toggle">
-        <span class="lang-active">EN</span>
+        <a href="../">EN</a>
         <span class="lang-sep">|</span>
-        <a href="ko/">KR</a>
+        <span class="lang-active">KR</span>
       </div>
     </div>
   </div>
@@ -340,36 +311,37 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section class="hero" id="home">
   <div class="container">
-    <div class="hero-tag fade-up d1">QUANTUM &nbsp;·&nbsp; AI &nbsp;·&nbsp; BIOMEDICINE</div>
-    <h1 class="fade-up d2">QBIT&nbsp;Lab<br><span class="accent">Quantum Bio-Intelligence Technology.</span></h1>
+    <div class="hero-tag fade-up d1">양자 &nbsp;·&nbsp; AI &nbsp;·&nbsp; 바이오메디슨</div>
+    <h1 class="fade-up d2">QBIT&nbsp;Lab<br><span class="accent">양자 생물지능 기술 연구실</span></h1>
+    <p class="hero-fullname fade-up d2">QBIT — Quantum Bio-Intelligence Technology</p>
     <p class="hero-sub fade-up d3">
-      Han Lab at Cambridge &amp; Yonsei — one team, two cities, pioneering AI-driven drug discovery through quantum methods and biomedical big data.
+      한남식 교수 연구실 — 케임브리지와 연세, 두 도시를 잇는 하나의 팀. 양자 기법(quantum methods)과 다중 모달 바이오 데이터를 결합한 인공지능 신약 개발(AI-driven drug discovery)의 최전선에서 연구합니다.
     </p>
     <div class="hero-meta fade-up d4">
       <div class="hero-meta-item">
-        <span class="hero-meta-label">Principal Investigator</span>
-        <span class="hero-meta-value">Prof. Namshik Han</span>
+        <span class="hero-meta-label">책임 연구자</span>
+        <span class="hero-meta-value">한남식 교수</span>
       </div>
       <div class="hero-meta-item">
-        <span class="hero-meta-label">Sites</span>
-        <span class="hero-meta-value"><span class="cyan">Cambridge</span> × <span class="orange">Yonsei</span></span>
+        <span class="hero-meta-label">연구 거점</span>
+        <span class="hero-meta-value"><span class="cyan">케임브리지</span> × <span class="orange">연세</span></span>
       </div>
       <div class="hero-meta-item">
-        <span class="hero-meta-label">Researchers</span>
-        <span class="hero-meta-value">40 across two labs</span>
+        <span class="hero-meta-label">연구원</span>
+        <span class="hero-meta-value">두 랩 합쳐 40명</span>
       </div>
       <div class="hero-meta-item">
-        <span class="hero-meta-label">Status</span>
-        <span class="hero-meta-value">Recruiting at all levels</span>
+        <span class="hero-meta-label">모집 현황</span>
+        <span class="hero-meta-value">전 단계 상시 모집</span>
       </div>
     </div>
 
     <div class="affiliations fade-up d5">
       <div class="affiliations-inner">
-        <span class="affiliations-label">Affiliated Institutions</span>
+        <span class="affiliations-label">소속 기관</span>
         <div class="affiliations-logos">
-          <img src="images/yonsei_logo.png" alt="Yonsei University" class="logo-yonsei">
-          <img src="images/cambridge_logo.png" alt="University of Cambridge" class="logo-cambridge">
+          <img src="../images/yonsei_logo.png" alt="연세대학교" class="logo-yonsei">
+          <img src="../images/cambridge_logo.png" alt="케임브리지대학교" class="logo-cambridge">
         </div>
       </div>
     </div>
@@ -396,36 +368,36 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section id="about">
   <div class="container">
-    <div class="section-label reveal">01 / About the Lab</div>
-    <h2 class="section-title reveal">A joint research group across <span class="accent">Cambridge</span> and <span class="accent">Yonsei</span> — operating as one integrated team.</h2>
+    <div class="section-label reveal">01 / 랩 소개</div>
+    <h2 class="section-title reveal">케임브리지와 연세를 잇는 <span class="accent">하나의 연구실.</span></h2>
 
     <div class="about-grid">
       <div class="about-text reveal">
-        <p>QBIT Lab, led by <strong>Professor Namshik Han</strong>, builds computational platforms that merge quantum algorithms, artificial intelligence, and multi-modal biomedical data to accelerate drug discovery.</p>
-        <p>Since September 2025, the lab has expanded from its Cambridge base at the <strong>Milner Therapeutics Institute</strong> into a second site at <strong>Yonsei University's Department of Quantum Information</strong>. The two groups operate as a single integrated team across the UK and Korea.</p>
-        <p>Our methods span quantum walk, quantum annealing, and quantum embeddings for knowledge graphs, quantum machine learning, network-based deep learning, causal reasoning, and large language models for scientific literature — applied to cancers, neurodegenerative disorders, inflammatory bowel disease, respiratory illness, and rare conditions.</p>
+        <p><strong>한남식 교수</strong>가 이끄는 QBIT Lab은 양자 알고리즘(quantum algorithms), 인공지능, 다중 모달 바이오 데이터(multi-modal biomedical data)를 결합한 계산 플랫폼을 구축하여 신약 개발을 가속화합니다.</p>
+        <p>2025년 9월부터 케임브리지대학교 <strong>Milner Therapeutics Institute</strong>에 더해, <strong>연세대학교 양자정보학과(Department of Quantum Information)</strong>에 두 번째 거점을 마련했습니다. 두 그룹은 영국과 한국을 잇는 하나의 통합된 팀으로 운영됩니다.</p>
+        <p>연구 방법론은 양자 워크(quantum walk), 양자 어닐링(quantum annealing), 지식 그래프를 위한 양자 임베딩(quantum embeddings for knowledge graphs), 양자 기계학습(quantum machine learning)부터 네트워크 딥러닝(network deep learning), 인과 추론(causal reasoning), 과학 문헌 분석을 위한 거대언어모델(LLMs)에 이르기까지 폭넓게 펼쳐집니다. 적용 분야는 각종 암, 신경퇴행성 질환, 염증성 장질환, 호흡기 질환, 희귀 질환 등입니다.</p>
       </div>
 
       <div class="about-stats reveal">
         <div class="about-stat">
           <span class="num">40<span class="small">+</span></span>
-          <span class="label">Publications</span>
-          <span class="desc">Peer-reviewed papers in <em>Nature</em>, <em>Science Advances</em>, <em>Cell Stem Cell</em>, <em>Gut</em>, and other leading journals.</span>
+          <span class="label">논문 발표</span>
+          <span class="desc"><em>Nature</em>, <em>Science Advances</em>, <em>Cell Stem Cell</em>, <em>Gut</em> 등 주요 학술지 게재.</span>
         </div>
         <div class="about-stat">
           <span class="num">40</span>
-          <span class="label">Current Researchers</span>
-          <span class="desc">Active members across postdoctoral, PhD, MSc, undergraduate, and visiting levels.</span>
+          <span class="label">현재 연구원</span>
+          <span class="desc">박사후 연구원, 박사·석사·학부 과정생, 방문 연구원으로 구성된 활동 멤버.</span>
         </div>
         <div class="about-stat">
           <span class="num">75<span class="small">+</span></span>
-          <span class="label">Researchers Trained</span>
-          <span class="desc">Cumulative members since 2016, now pursuing PhDs at Cambridge or working at AstraZeneca, Boehringer Ingelheim, LifeArc, CardiaTec, and beyond.</span>
+          <span class="label">누적 연구원</span>
+          <span class="desc">2016년 이래 거쳐 간 멤버 누적. 졸업생들은 케임브리지 박사과정 및 AstraZeneca, Boehringer Ingelheim, LifeArc, CardiaTec 등으로 진출.</span>
         </div>
         <div class="about-stat">
           <span class="num">2</span>
-          <span class="label">Spin-out Companies</span>
-          <span class="desc">Storm Therapeutics (Phase 2 clinical trials of METTL3 inhibitor) and CardiaTec Biosciences.</span>
+          <span class="label">창업 기업</span>
+          <span class="desc">METTL3 저해제 임상 2상 진행 중인 Storm Therapeutics, 그리고 CardiaTec Biosciences.</span>
         </div>
       </div>
     </div>
@@ -434,15 +406,15 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section id="research">
   <div class="container">
-    <div class="section-label reveal">02 / Research</div>
-    <h2 class="section-title reveal">Three pillars converging on <span class="accent">drug discovery.</span></h2>
-    <p class="section-intro reveal">We integrate quantum computation, AI architectures, and multi-modal biomedical data into a single translational pipeline — from algorithmic innovation through to new therapeutic targets, drug repositioning candidates, and biomarkers.</p>
+    <div class="section-label reveal">02 / 연구</div>
+    <h2 class="section-title reveal">양자·인공지능·데이터, <span class="accent">신약 개발을 향해.</span></h2>
+    <p class="section-intro reveal">서로 다른 세 갈래의 방법론을 하나의 중개연구(translational research) 파이프라인으로 통합합니다 — 알고리즘 개발에서 출발해 신규 치료 표적, 약물 재창출(drug repurposing) 후보, 환자 분류 바이오마커(biomarker) 발굴까지.</p>
 
     <div class="research-pillars">
       <div class="pillar reveal">
-        <div class="pillar-num">[ Q1 ] — QUANTUM METHODS</div>
-        <h3>Quantum &amp; Quantum-Inspired Computation</h3>
-        <p>Quantum algorithms for problems where classical computing falls short — biological network exploration, combinatorial optimisation, and high-dimensional embeddings.</p>
+        <div class="pillar-num">[ Q1 ] — 양자 방법론</div>
+        <h3>양자 및 양자영감 컴퓨팅 <br><span class="pillar-en">Quantum & Quantum-Inspired Computation</span></h3>
+        <p>고전 컴퓨팅이 한계를 보이는 문제를 위한 양자 알고리즘 — 생물학적 네트워크 탐색, 조합 최적화(combinatorial optimization), 고차원 임베딩(high-dimensional embeddings).</p>
         <div class="pillar-tags">
           <span class="pillar-tag">Quantum Walk</span>
           <span class="pillar-tag">Quantum Annealing</span>
@@ -452,9 +424,9 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
       </div>
 
       <div class="pillar reveal">
-        <div class="pillar-num">[ Q2 ] — AI ARCHITECTURES</div>
-        <h3>Artificial Intelligence for Drug Discovery</h3>
-        <p>Purpose-built AI for biomedicine — network deep learning, causal reasoning, and LLM-driven machine reading for knowledge graphs over literature and patents.</p>
+        <div class="pillar-num">[ Q2 ] — AI 아키텍처</div>
+        <h3>인공지능 신약 개발 <br><span class="pillar-en">Artificial Intelligence for Drug Discovery</span></h3>
+        <p>바이오메디슨에 특화된 AI — 네트워크 딥러닝(network deep learning), 인과 추론(causal reasoning), 그리고 문헌·특허 지식 그래프(knowledge graphs) 구축을 위한 LLM 기반 기계 독해.</p>
         <div class="pillar-tags">
           <span class="pillar-tag">Network DL</span>
           <span class="pillar-tag">Causal Reasoning</span>
@@ -464,9 +436,9 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
       </div>
 
       <div class="pillar reveal">
-        <div class="pillar-num">[ Q3 ] — DATA INTEGRATION</div>
-        <h3>Multi-Modal Biomedical Data</h3>
-        <p>The full spectrum — multi-omics with clinical annotation, protein structure including AlphaFold, single-cell and spatial transcriptomics, patient-derived organoid data, and literature.</p>
+        <div class="pillar-num">[ Q3 ] — 데이터 통합</div>
+        <h3>다중 모달 바이오 데이터 <br><span class="pillar-en">Multi-Modal Biomedical Data</span></h3>
+        <p>임상 정보가 결합된 멀티오믹스(multi-omics), AlphaFold를 포함한 단백질 구조, 단일세포·공간 전사체(single-cell & spatial transcriptomics), 환자 유래 오가노이드(patient-derived organoids), 그리고 문헌까지 — 전 스펙트럼.</p>
         <div class="pillar-tags">
           <span class="pillar-tag">Multi-Omics</span>
           <span class="pillar-tag">AlphaFold</span>
@@ -477,37 +449,37 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
     </div>
 
     <div class="outcomes reveal">
-      <div class="outcomes-label">Outcomes →</div>
+      <div class="outcomes-label">연구 산출 →</div>
       <div class="outcome">
-        <h4><span class="arrow">+</span>New Targets</h4>
-        <p>Therapeutic targets for undruggable and difficult diseases.</p>
+        <h4><span class="arrow">+</span>신규 표적</h4>
+        <p>난치성 질환의 새로운 치료 표적 발굴.</p>
       </div>
       <div class="outcome">
-        <h4><span class="arrow">+</span>Repositioning</h4>
-        <p>Drug repositioning candidates with mechanistic rationale.</p>
+        <h4><span class="arrow">+</span>약물 재창출</h4>
+        <p>기전적 근거에 기반한 약물 재창출 후보군.</p>
       </div>
       <div class="outcome">
-        <h4><span class="arrow">+</span>Biomarkers</h4>
-        <p>Stratification markers for clinical trial design.</p>
+        <h4><span class="arrow">+</span>바이오마커</h4>
+        <p>임상시험 설계를 위한 환자 분류 마커.</p>
       </div>
     </div>
 
     <div class="diseases reveal">
-      <div class="diseases-label">Disease Focus Areas</div>
+      <div class="diseases-label">질환 분야</div>
       <div class="disease-tags">
-        <span class="disease-tag">Lung Cancer</span>
-        <span class="disease-tag">Kidney Cancer</span>
-        <span class="disease-tag">Gastric Cancer</span>
-        <span class="disease-tag">Prostate Cancer</span>
-        <span class="disease-tag">Blood Cancers</span>
-        <span class="disease-tag">Immuno-Oncology</span>
-        <span class="disease-tag">Alzheimer's Disease</span>
-        <span class="disease-tag">CNS Disorders</span>
-        <span class="disease-tag">Inflammatory Bowel Disease</span>
-        <span class="disease-tag">Respiratory Diseases</span>
-        <span class="disease-tag">Liver Diseases</span>
-        <span class="disease-tag">Metabolic Disorders</span>
-        <span class="disease-tag">Infectious Diseases</span>
+        <span class="disease-tag">폐암</span>
+        <span class="disease-tag">신장암</span>
+        <span class="disease-tag">위암</span>
+        <span class="disease-tag">전립선암</span>
+        <span class="disease-tag">혈액암</span>
+        <span class="disease-tag">면역항암</span>
+        <span class="disease-tag">알츠하이머병</span>
+        <span class="disease-tag">중추신경계 질환</span>
+        <span class="disease-tag">염증성 장질환</span>
+        <span class="disease-tag">호흡기 질환</span>
+        <span class="disease-tag">간 질환</span>
+        <span class="disease-tag">대사 장애</span>
+        <span class="disease-tag">감염성 질환</span>
       </div>
     </div>
   </div>
@@ -515,34 +487,34 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section id="people">
   <div class="container">
-    <div class="section-label reveal">03 / People</div>
-    <h2 class="section-title reveal">Two labs. <span class="accent">One team.</span></h2>
-    <p class="section-intro reveal">A group of 40 researchers across Cambridge and Yonsei working at the intersection of quantum computing, AI, and biomedicine.</p>
+    <div class="section-label reveal">03 / 구성원</div>
+    <h2 class="section-title reveal">두 곳의 거점, <span class="accent">하나의 팀.</span></h2>
+    <p class="section-intro reveal">케임브리지와 연세에서 양자 컴퓨팅, 인공지능, 바이오메디슨의 교차점을 함께 연구하는 40명의 연구원.</p>
 
     <div class="pi-card reveal">
-      <div class="pi-photo"><img src="images/pi.jpg" alt="Professor Namshik Han"></div>
+      <div class="pi-photo"><img src="../images/pi.jpg" alt="한남식 교수"></div>
       <div class="pi-info">
-        <div class="pi-label">Principal Investigator</div>
-        <h3 class="pi-name">Namshik Han <span class="ko">한남식</span></h3>
+        <div class="pi-label">책임 연구자 (Principal Investigator)</div>
+        <h3 class="pi-name">한남식 <span class="en">Namshik Han</span></h3>
         <div class="pi-affiliations">
           <div class="pi-affil-group">
-            <div class="pi-affil-label yonsei">Yonsei · Korea</div>
-            <div class="pi-affil-primary">Professor, Department of Quantum Information</div>
-            <div class="pi-affil-secondary">BP+ Fellow, Institute for Convergence Research and Education in Advanced Technology · IBS Professor, Advanced Science Institute · AI+X Professor, School of Computing · Adjunct Professor, College of Pharmacy</div>
+            <div class="pi-affil-label yonsei">연세 · 한국</div>
+            <div class="pi-affil-primary">교수, 연세대학교 양자정보학과 (Department of Quantum Information)</div>
+            <div class="pi-affil-secondary">BP+ 펠로우, Institute for Convergence Research and Education in Advanced Technology · IBS 교수, Advanced Science Institute · AI+X 교수, School of Computing · 겸임교수, 약학대학</div>
           </div>
           <div class="pi-affil-group">
-            <div class="pi-affil-label cambridge">Cambridge · UK</div>
-            <div class="pi-affil-primary">Group Leader &amp; Head of AI Research, Milner Therapeutics Institute</div>
-            <div class="pi-affil-secondary">Faculty, Cambridge Centre for AI in Medicine · Affiliated PI, Cambridge Stem Cell Institute</div>
+            <div class="pi-affil-label cambridge">케임브리지 · 영국</div>
+            <div class="pi-affil-primary">그룹 리더 및 AI 연구 책임자 (Group Leader &amp; Head of AI Research), Milner Therapeutics Institute</div>
+            <div class="pi-affil-secondary">교수진 (Faculty), Cambridge Centre for AI in Medicine · 협력 PI (Affiliated PI), Cambridge Stem Cell Institute</div>
           </div>
           <div class="pi-affil-group">
-            <div class="pi-affil-label industry">Industry</div>
-            <div class="pi-affil-primary">Co-founder &amp; CTO, CardiaTec Bio</div>
+            <div class="pi-affil-label industry">산업</div>
+            <div class="pi-affil-primary">공동창립자 & CTO, CardiaTec Bio</div>
           </div>
         </div>
         <div class="pi-contact">
-          <span><span class="label">Yonsei</span><a href="mailto:namshik.han@yonsei.ac.kr">namshik.han@yonsei.ac.kr</a></span>
-          <span><span class="label">Cambridge</span><a href="mailto:nh417@cam.ac.uk">nh417@cam.ac.uk</a></span>
+          <span><span class="label">연세</span><a href="mailto:namshik.han@yonsei.ac.kr">namshik.han@yonsei.ac.kr</a></span>
+          <span><span class="label">케임브리지</span><a href="mailto:nh417@cam.ac.uk">nh417@cam.ac.uk</a></span>
           <span><span class="label">Scholar</span><a href="https://scholar.google.com/citations?user=Y6voIKsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar →</a></span>
           <span><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/namshik/" target="_blank" rel="noopener">/in/namshik →</a></span>
         </div>
@@ -552,36 +524,36 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
     <div class="teams">
       <div class="team reveal">
         <div class="team-header">
-          <h3>Yonsei <span class="location">신촌 · 송도</span></h3>
+          <h3>연세 <span class="location">신촌 · 송도</span></h3>
           <span class="team-count">N = 8</span>
         </div>
 
         <div class="role-group">
-          <div class="role-title">Research Professor</div>
+          <div class="role-title">연구교수</div>
           <ul class="role-members">
-            <li class="lead">Byunggyu Park 박병규</li>
+            <li class="lead">박병규 Byunggyu Park</li>
           </ul>
         </div>
 
         <div class="role-group">
-          <div class="role-title">PhD Student</div>
+          <div class="role-title">박사과정생</div>
           <ul class="role-members">
-            <li>Jihye Sung 성지혜</li>
+            <li>성지혜 Jihye Sung</li>
           </ul>
         </div>
 
         <div class="role-group">
-          <div class="role-title">MSc Students</div>
+          <div class="role-title">석사과정생</div>
           <ul class="role-members">
-            <li>Dohyun Kim 김도현</li>
-            <li>Jiwan Kang 강지완</li>
-            <li>Si Hyeon Cho 조시현</li>
-            <li>Sueon Bae 배수언</li>
+            <li>김도현 Dohyun Kim</li>
+            <li>강지완 Jiwan Kang</li>
+            <li>조시현 Si Hyeon Cho</li>
+            <li>배수언 Sueon Bae</li>
           </ul>
         </div>
 
         <div class="role-group">
-          <div class="role-title">Visiting Scientists</div>
+          <div class="role-title">방문 연구원</div>
           <ul class="role-members">
             <li>Harold Won <span class="affil">(<a href="https://www.imperial.ac.uk/" target="_blank" rel="noopener">Imperial College London</a>)</span></li>
             <li>Richard Kim <span class="affil">(<a href="https://www.jhu.edu/" target="_blank" rel="noopener">Johns Hopkins University</a>)</span></li>
@@ -591,19 +563,19 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
       <div class="team reveal">
         <div class="team-header">
-          <h3>Cambridge <span class="location">Milner Therapeutics Institute</span></h3>
+          <h3>케임브리지 <span class="location">Milner Therapeutics Institute</span></h3>
           <span class="team-count">N = 32</span>
         </div>
 
         <div class="role-group">
-          <div class="role-title">Senior Scientist</div>
+          <div class="role-title">수석 연구원 (Senior Scientist)</div>
           <ul class="role-members">
             <li class="lead">Gehad Youssef</li>
           </ul>
         </div>
 
         <div class="role-group">
-          <div class="role-title">Postdoctoral Researchers</div>
+          <div class="role-title">박사후 연구원 (Postdoc)</div>
           <ul class="role-members">
             <li>Holly Giles</li>
             <li>Fatima Baldo</li>
@@ -612,14 +584,14 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="role-group">
-          <div class="role-title">Research Associate</div>
+          <div class="role-title">연구원 (Research Associate)</div>
           <ul class="role-members">
             <li>Yibin Chun</li>
           </ul>
         </div>
 
         <div class="role-group">
-          <div class="role-title">PhD Students</div>
+          <div class="role-title">박사과정생</div>
           <ul class="role-members">
             <li>Nicholas M. Katritsis</li>
             <li>Greta Baltusyte</li>
@@ -635,7 +607,7 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="role-group">
-          <div class="role-title">MSc Students</div>
+          <div class="role-title">석사과정생</div>
           <ul class="role-members">
             <li>James Wallace</li>
             <li>David Barron</li>
@@ -646,7 +618,7 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="role-group">
-          <div class="role-title">Undergraduate Students</div>
+          <div class="role-title">학부 연구생</div>
           <ul class="role-members">
             <li>Silas Ruhrberg Estevez</li>
             <li>Dhruval Soni</li>
@@ -661,7 +633,7 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="role-group">
-          <div class="role-title">Visiting Scientists</div>
+          <div class="role-title">방문 연구원</div>
           <ul class="role-members">
             <li>Suyoung Kim</li>
             <li>Heui Man Kim</li>
@@ -672,13 +644,13 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
     </div>
 
     <div class="alumni-block reveal">
-      <h3>Training &amp; Alumni</h3>
-      <p class="alumni-summary">Since 2016, more than <strong>75 researchers</strong> have been part of the lab across Cambridge and Yonsei — including <strong>10 at the postdoctoral and senior-scientist level</strong> (five now established elsewhere and five currently with the group, alongside our Yonsei research professor), <strong>13 PhD researchers</strong>, <strong>24 MSc researchers</strong>, and many undergraduate and visiting scientists. Our alumni have gone on to pursue PhDs at the University of Cambridge and to join AstraZeneca, Boehringer Ingelheim, LifeArc, CardiaTec, Synteny, and leading academic institutions across the UK, Korea, and beyond.</p>
-      <p class="alumni-note">Listed below are those who have completed their time with the lab.</p>
+      <h3>인재 양성 및 동문</h3>
+      <p class="alumni-summary">2016년 이래 케임브리지와 연세를 거쳐간 연구원은 <strong>75명 이상</strong>입니다 — <strong>박사후 연구원(postdoc) 및 수석 연구원(senior scientist)급 10명</strong> (졸업 후 진출 5명 + 현재 재직 5명, 연세 연구교수 포함), <strong>박사과정 13명</strong>, <strong>석사과정 24명</strong>, 그 외 다수의 학부 연구생 및 방문 연구원. 동문들은 케임브리지대학교 박사과정에 진학하거나 AstraZeneca, Boehringer Ingelheim, LifeArc, CardiaTec, Synteny 등 국내외 유수 기관에서 활약하고 있습니다.</p>
+      <p class="alumni-note">아래는 랩 과정을 마치고 다음 단계로 진출한 분들의 명단입니다.</p>
 
       <div class="alumni-groups">
         <div class="alumni-group">
-          <div class="role-title">Senior Scientists &amp; Postdocs</div>
+          <div class="role-title">수석 연구원 & 박사후 연구원</div>
           <ul class="role-members">
             <li>Georgia Tsagkogeorga</li>
             <li>Woochang Hwang</li>
@@ -689,7 +661,7 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="alumni-group">
-          <div class="role-title">PhD</div>
+          <div class="role-title">박사</div>
           <ul class="role-members">
             <li>Anika Liu</li>
             <li>Winnie Lei</li>
@@ -697,7 +669,7 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="alumni-group">
-          <div class="role-title">MSc</div>
+          <div class="role-title">석사</div>
           <ul class="role-members">
             <li>Hannah Bazin</li>
             <li>Mac Walker</li>
@@ -718,7 +690,7 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
         </div>
 
         <div class="alumni-group">
-          <div class="role-title">Undergrad &amp; Visiting</div>
+          <div class="role-title">학부생 & 방문 연구원</div>
           <ul class="role-members">
             <li>Noah Collins</li>
             <li>Mark Wong</li>
@@ -744,34 +716,34 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section id="gallery">
   <div class="container">
-    <div class="section-label reveal">04 / Life at QBIT</div>
-    <h2 class="section-title reveal">Beyond the screens, <span class="accent">together.</span></h2>
-    <p class="section-intro reveal">A team built around shared curiosity — at the bench, in the pub, on the lawn. Moments from Cambridge and our growing collaboration with Yonsei.</p>
+    <div class="section-label reveal">04 / 갤러리</div>
+    <h2 class="section-title reveal">연구실의 <span class="accent">안과 밖.</span></h2>
+    <p class="section-intro reveal">실험실 책상에서, 학회 발표장에서, 펍과 잔디밭에서 — 케임브리지와 연세에서 만들어가는 일상의 풍경.</p>
 
     <div class="gallery reveal">
       <div class="gphoto span-3x2 featured-portrait">
-        <img src="images/lab_yonsei_blossom.jpg" alt="Yonsei team under cherry blossoms in Seoul">
-        <div class="gcaption">Yonsei Team · Seoul, Spring</div>
+        <img src="../images/lab_yonsei_blossom.jpg" alt="벚꽃 아래 연세팀">
+        <div class="gcaption">연세 팀 · 서울, 봄</div>
       </div>
       <div class="gphoto span-3 crop-lower">
-        <img src="images/lab_cambridge_grass.jpg" alt="Lab team on Cambridge college lawn">
-        <div class="gcaption">Cambridge · 2024</div>
+        <img src="../images/lab_cambridge_grass.jpg" alt="케임브리지 잔디밭 단체사진">
+        <div class="gcaption">케임브리지 · 2024</div>
       </div>
       <div class="gphoto span-3 crop-upper">
-        <img src="images/lab_studio.jpg" alt="Han Lab studio portrait">
-        <div class="gcaption">Han Lab · Milner Institute</div>
+        <img src="../images/lab_studio.jpg" alt="한 랩 스튜디오 단체사진">
+        <div class="gcaption">한 랩 · Milner Institute</div>
       </div>
       <div class="gphoto span-2">
-        <img src="images/lab_dinner.jpg" alt="Lab dinner gathering">
-        <div class="gcaption">Lab Dinner · 2024</div>
+        <img src="../images/lab_dinner.jpg" alt="랩 디너">
+        <div class="gcaption">랩 디너 · 2024</div>
       </div>
       <div class="gphoto span-2">
-        <img src="images/lab_pub.jpg" alt="Lab pub gathering">
-        <div class="gcaption">Pub Night · 2022</div>
+        <img src="../images/lab_pub.jpg" alt="펍에서 모임">
+        <div class="gcaption">펍 나이트 · 2022</div>
       </div>
       <div class="gphoto span-2">
-        <img src="images/lab_pizza.jpg" alt="Lab outdoor gathering">
-        <div class="gcaption">Summer Meetup · 2023</div>
+        <img src="../images/lab_pizza.jpg" alt="야외 모임">
+        <div class="gcaption">여름 모임 · 2023</div>
       </div>
     </div>
   </div>
@@ -779,9 +751,9 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section id="publications">
   <div class="container">
-    <div class="section-label reveal">05 / Publications</div>
-    <h2 class="section-title reveal">Selected work, <span class="accent">peer-reviewed.</span></h2>
-    <p class="section-intro reveal">A selection of recent and landmark papers. The complete list of 40+ publications is available via <a href="https://scholar.google.com/citations?user=Y6voIKsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    <div class="section-label reveal">05 / 논문</div>
+    <h2 class="section-title reveal">주요 <span class="accent">연구 성과.</span></h2>
+    <p class="section-intro reveal">최근 발표한 대표 논문 일부입니다. 40편 이상의 전체 목록은 <a href="https://scholar.google.com/citations?user=Y6voIKsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>에서 확인하실 수 있습니다.</p>
 
     <div class="pubs">
 
@@ -963,48 +935,48 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
     </div>
 
     <div class="pubs-footer reveal">
-      <a href="https://scholar.google.com/citations?user=Y6voIKsAAAAJ&amp;hl=en" target="_blank" rel="noopener">View complete list on Google Scholar →</a>
+      <a href="https://scholar.google.com/citations?user=Y6voIKsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar에서 전체 논문 보기 →</a>
     </div>
   </div>
 </section>
 
 <section id="news">
   <div class="container">
-    <div class="section-label reveal">06 / News</div>
-    <h2 class="section-title reveal">Updates from the <span class="accent">lab.</span></h2>
+    <div class="section-label reveal">06 / 소식</div>
+    <h2 class="section-title reveal">연구실의 <span class="accent">최근 발자취.</span></h2>
 
     <div class="news">
       <div class="news-item reveal">
         <div class="news-date">2026.04</div>
-        <div class="news-content">Prof. Han delivers keynote at the <strong>Yonsei-IBS Nobel Forum 2026</strong>, presenting quantum-AI hybrid approaches for the future of drug discovery and nanomedicine.</div>
+        <div class="news-content">한남식 교수, <strong>2026 연세-IBS 노벨 포럼</strong>에서 기조강연 발표 — 신약 개발과 나노메디슨(nanomedicine)의 미래를 위한 양자-AI 융합 접근법 소개.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2026.03</div>
-        <div class="news-content">New paper in <em>Communications Chemistry</em> (Nature Collection): network medicine framework for multi-modal data integration in therapeutic target discovery.</div>
+        <div class="news-content">신약 표적 발굴을 위한 다중 모달 데이터 통합 네트워크 의학(network medicine) 프레임워크 논문, <em>Communications Chemistry</em> (Nature Collection)에 게재.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2026.02</div>
-        <div class="news-content">Lab publication on quantum walk-based network analysis of Long COVID pathophysiology appears in <em>Bioinformatics Advances</em>.</div>
+        <div class="news-content">롱코비드(Long COVID) 병태생리에 대한 양자 워크 기반 네트워크 분석 논문, <em>Bioinformatics Advances</em> 게재.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2025.12</div>
-        <div class="news-content"><strong>iPANDDA paper published in <em>Communications Chemistry</em></strong> — selected for the Nature Portfolio collection <em>Computational Methodology for Drug Discovery</em>. The lab's in-silico pipeline identifies AKT/mTOR as key targets for SOX2-dependent lung squamous cell carcinoma.</div>
+        <div class="news-content"><strong>iPANDDA 논문, <em>Communications Chemistry</em>에 게재</strong> — Nature Portfolio 컬렉션 <em>Computational Methodology for Drug Discovery</em>에 선정. SOX2 의존성 폐 편평세포암(squamous cell lung cancer)에서 AKT/mTOR를 주요 표적으로 도출한 인실리코(in silico) 파이프라인.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2025.12</div>
-        <div class="news-content">QBIT Lab joins as a participating laboratory in <strong>NRL 2.0 (National Research Laboratory)</strong> — a flagship Korean national R&amp;D programme awarded to Yonsei University, supporting strategic frontier research at the intersection of quantum computing, AI, and biomedicine.</div>
+        <div class="news-content">QBIT Lab, 연세대학교가 수주한 <strong>국가연구실(NRL 2.0, National Research Laboratory)</strong>의 참여 랩으로 합류 — 양자 컴퓨팅, AI, 바이오메디슨 융합 분야의 전략 연구를 지원하는 정부 주도 대형 R&amp;D 사업.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2025.09</div>
-        <div class="news-content">Awarded <strong>NRF ARPA-H National Project</strong> (2025–2029) for <em>Q-DrugX: Quantum-AI-based drug discovery platform for refractory gastric cancer</em>.</div>
+        <div class="news-content"><strong>NRF 보건의료고등기술사업(ARPA-H) 국가과제</strong> 수주 (2025–2029) — <em>난치성 위암 신약 개발을 위한 양자-AI 기반 플랫폼 Q-DrugX</em>.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2025.09</div>
-        <div class="news-content">Awarded <strong>NRF Brain Pool Plus (BP+)</strong> funding (2025–2034) for <em>Quantum-AI driven translational biomedical research hub for therapeutic target discovery and validation</em>.</div>
+        <div class="news-content"><strong>NRF Brain Pool Plus (BP+) 펠로우십</strong> 수주 (2025–2034) — <em>치료 표적 발굴 및 검증을 위한 양자-AI 기반 중개 바이오메디컬 연구 허브</em>.</div>
       </div>
       <div class="news-item reveal">
         <div class="news-date">2025.09</div>
-        <div class="news-content"><strong>QBIT Lab launches at Yonsei University.</strong> Prof. Han joins as Professor of Quantum Information; Cambridge and Yonsei groups now operate as One Team.</div>
+        <div class="news-content"><strong>QBIT Lab, 연세대학교 개소.</strong> 한남식 교수, 양자정보학과(Department of Quantum Information) 교수로 합류 — 케임브리지와 연세 두 그룹이 하나의 팀으로 운영 시작.</div>
       </div>
     </div>
   </div>
@@ -1012,38 +984,38 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
 <section id="contact">
   <div class="container">
-    <div class="section-label reveal">07 / Contact</div>
-    <h2 class="section-title reveal">Two offices. <span class="accent">One inbox.</span></h2>
+    <div class="section-label reveal">07 / 연락처</div>
+    <h2 class="section-title reveal">두 도시의 <span class="accent">연구실.</span></h2>
 
     <div class="contacts">
       <div class="contact-card reveal">
-        <div class="contact-flag">Yonsei · Korea</div>
-        <h3 class="contact-name">QBIT Lab — Yonsei</h3>
-        <p class="contact-sub">Department of Quantum Information<br>Yonsei University</p>
+        <div class="contact-flag">연세 · 한국</div>
+        <h3 class="contact-name">QBIT Lab — 연세</h3>
+        <p class="contact-sub">연세대학교 양자정보학과<br>Department of Quantum Information, Yonsei University</p>
         <div class="contact-detail">
-          <span class="key">Sinchon</span>
-          <span class="val">#301, IBS Hall, Yonsei University, Seoul</span>
+          <span class="key">신촌</span>
+          <span class="val">서울특별시 서대문구, 연세대학교 IBS Hall 301호</span>
         </div>
         <div class="contact-detail">
-          <span class="key">Songdo</span>
-          <span class="val">#515, Libertas Hall B, Yonsei International Campus, Incheon</span>
+          <span class="key">송도</span>
+          <span class="val">인천광역시 연수구, 연세대학교 국제캠퍼스 Libertas Hall B 515호</span>
         </div>
         <div class="contact-detail">
-          <span class="key">Email</span>
+          <span class="key">이메일</span>
           <span class="val"><a href="mailto:namshik.han@yonsei.ac.kr">namshik.han@yonsei.ac.kr</a></span>
         </div>
       </div>
 
       <div class="contact-card cambridge reveal">
-        <div class="contact-flag">Cambridge · UK</div>
-        <h3 class="contact-name">Han Lab — Cambridge</h3>
+        <div class="contact-flag">케임브리지 · 영국</div>
+        <h3 class="contact-name">Han Lab — 케임브리지</h3>
         <p class="contact-sub">Milner Therapeutics Institute<br>University of Cambridge</p>
         <div class="contact-detail">
-          <span class="key">Address</span>
+          <span class="key">주소</span>
           <span class="val">L1, Jeffrey Cheah Biomedical Centre, Cambridge Biomedical Campus, Cambridge</span>
         </div>
         <div class="contact-detail">
-          <span class="key">Email</span>
+          <span class="key">이메일</span>
           <span class="val"><a href="mailto:nh417@cam.ac.uk">nh417@cam.ac.uk</a></span>
         </div>
       </div>
@@ -1051,10 +1023,10 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 
     <div class="collab-cta reveal">
       <div>
-        <h3>Interested in collaborating?</h3>
-        <p>We welcome enquiries from academic groups, clinicians, and industry partners working in computational drug discovery, multi-omics, and quantum-AI methods.</p>
+        <h3>공동연구에 관심 있으신가요?</h3>
+        <p>인공지능 신약 개발(AI-driven drug discovery), 멀티오믹스(multi-omics), 양자-AI 융합 방법론 분야의 학계 연구자, 임상의, 산학협력 파트너의 문의를 환영합니다.</p>
       </div>
-      <a href="mailto:namshik.han@yonsei.ac.kr?subject=Inquiry%20to%20QBIT%20Lab" class="cta-btn">Get in touch →</a>
+      <a href="mailto:namshik.han@yonsei.ac.kr?subject=Inquiry%20to%20QBIT%20Lab" class="cta-btn">연락하기 →</a>
     </div>
   </div>
 </section>
@@ -1062,8 +1034,8 @@ footer { padding: 60px 0 40px; border-top: 1px solid var(--border); margin-top: 
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">QBIT Lab · Quantum Bio-Intelligence Technology</div>
-      <div class="footer-meta">© 2026 Han Lab · Cambridge × Yonsei</div>
+      <div class="footer-brand">QBIT Lab · 양자 생물지능 기술 연구실</div>
+      <div class="footer-meta">© 2026 한남식 연구실 · 케임브리지 × 연세</div>
     </div>
   </div>
 </footer>
